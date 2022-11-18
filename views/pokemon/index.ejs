@@ -1,0 +1,16 @@
+<%- include("../partials/head.ejs") %>
+
+<h1>List of Pokemon</h1>
+
+<ul>
+    <% pokemons.forEach((pokemon, index) => { %>
+        <div>
+            <a href="/pokemon/<%= index %>"><h1><%= pokemon.name %></h1></a>
+            <h3><%= pokemon.type %></h3>
+            <img src="<%= pokemon.img %>" alt="Pokemon">
+        </div>
+
+   <% }) %>
+</ul>
+
+
