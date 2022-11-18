@@ -50965,6 +50965,15 @@ getAll: function(){
 },
 getOne: function(index){
   return this.data[index]
+}, 
+create: function(newPokemon){
+  this.data.push(newPokemon)
+}, 
+update: function(index, updates){
+  this.data[index] = updates
+},
+destroy: function(index){
+  this.data.splice(index, 1)
 }
 };
 

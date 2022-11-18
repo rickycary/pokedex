@@ -3,10 +3,22 @@
 <h1>List of Pokemon</h1>
 
 <ul>
+
+    <div class="search">
+        <input type="text" placeholder="Search Pokemon" >
+        <input type="Submit">
+    </div>
+
+    <a href="/pokemon/new">Create New Pokemon</a>
+
     <% pokemons.forEach((pokemon, index) => { %>
-        <div>
+
+
+
+        <div class="all">
+            <h1># <%= pokemon.id %></h1>
             <a href="/pokemon/<%= index %>"><h1><%= pokemon.name %></h1></a>
-            <h3><%= pokemon.type %></h3>
+            <h3>Type: <%= pokemon.type %></h3>
             <img src="<%= pokemon.img %>" alt="Pokemon">
         </div>
 

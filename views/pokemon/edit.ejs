@@ -1,0 +1,8 @@
+<%- include("../partials/head.ejs") %>
+
+<h1>Do you want to give <%= pokemon.name %> a nickname?</h1>
+
+<form action="/pokemon/<%= index %>?_method=PUT" method="post">
+    <input type="text" name="name" placeholder="Enter nickname here">
+    <input type="submit" value="Submit">
+</form>

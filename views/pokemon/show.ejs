@@ -1,8 +1,17 @@
+<%- include("../partials/head.ejs") %>
+
+
 <div>
-<h1><%= pokemon.name %></h1>
-<img src="<%= pokemon.img %>" alt="Pokemon">
-<h3><%= pokemon.type %></h3>
+    <h1># <%= pokemon.id %></h1>
+    <h1><%= pokemon.name %></h1>
+    <img src="<%= pokemon.img %>" alt="Pokemon">
+    <h3><%= pokemon.type %></h3>
 </div>
 
+<a href="/pokemon/<%= index %>/edit"><button>Give <% pokemon.name%> a Nickname</button></a>
+<br>
 <a href="/pokemon">Back to pokedex</a>
-
+<br>
+<form action="/pokemon/<%= index %>?_method=DELETE" method="post" >
+    <input type="submit" value="Delete">
+</form>
