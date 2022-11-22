@@ -1,26 +1,32 @@
 <%- include("../partials/head.ejs") %>
 
-<h1>List of Pokemon</h1>
-
+<header class="header"> 
+<body>
+        <img class="headerLogo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/586eb2a4-2bfc-4d6c-a977-7832b91b9c02/ddrcbsj-16539b24-38a5-4d6d-aaf2-58e31d93cfbb.png/v1/fill/w_1473,h_542,strp/pokemon__1996_____logo_by_theyounghistorian_ddrcbsj-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzA3IiwicGF0aCI6IlwvZlwvNTg2ZWIyYTQtMmJmYy00ZDZjLWE5NzctNzgzMmI5MWI5YzAyXC9kZHJjYnNqLTE2NTM5YjI0LTM4YTUtNGQ2ZC1hYWYyLTU4ZTMxZDkzY2ZiYi5wbmciLCJ3aWR0aCI6Ijw9MTkyMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.VdgI0GmmXqUDmxJ3rBE5x6rK72CvIKSRBXg7YIV9vDY" alt="Pokemon logo">
+    
+    
+    <button class="button"><a href="/pokemon/new">Create New Pokemon</a></button>
+</body>
+</header>  
 <ul>
 
-    <div class="search">
+    <!-- <div class="search">
         <input type="text" placeholder="Search Pokemon" >
         <input type="Submit">
-    </div>
+    </div> -->
 
-    <a href="/pokemon/new">Create New Pokemon</a>
+    <br>
 
     <% pokemons.forEach((pokemon, index) => { %>
 
 
 
-        <div class="all">
-            <h1># <%= pokemon.id %></h1>
-            <a href="/pokemon/<%= index %>"><h1><%= pokemon.name %></h1></a>
-            <h3>Type: <%= pokemon.type %></h3>
-            <img src="<%= pokemon.img %>" alt="Pokemon">
-        </div>
+            <!-- <h1># <%= pokemon.id %></h1> -->
+            <a href="/pokemon/<%= index %>"><img class="image" src="<%= pokemon.img %>" alt="<%= pokemon.name %>" width="100">
+
+            <!-- <a href="/pokemon/<%= index %>"><h1><%= pokemon.name %></h1></a>
+            <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>">
+            <h3><%= pokemon.type %></h3> -->
 
    <% }) %>
 </ul>

@@ -1,4 +1,57 @@
-h1 {
-    color: red;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-image: url(https://images3.alphacoders.com/273/273289.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.headerLogo {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create {
+    background-color: white;
+    border: red;
+}
+
+.image {
+    width:  150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 180px;
+}
+
+.singlePokemon {
+    border: 3px solid;
+    display: flex;
+    justify-content: center;
+}
+
+
+.showID, .showName, .showType {
+    background-color: lightblue;
+    margin: 50px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 32px;
+}
